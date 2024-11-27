@@ -1,0 +1,86 @@
+[
+    {
+        "model": "glm-4",
+        "answer_rouge_correctness": 0.26,
+        "answer_exact_match": 0.25,
+        "answer_disambig_f1": 0.25,
+        "answer_bert_score": 0.86,
+        "gpt4_accuracy": 2.52,
+        "gpt4_informativeness": 2.71,
+        "answer_relevance_score": 0.91,
+        "response_length": 1162.41,
+        "dataset": "asqa"
+    },
+    {
+        "model": "llama2-13b-chat",
+        "answer_rouge_correctness": 0.31,
+        "answer_exact_match": 0.25,
+        "answer_disambig_f1": 0.29,
+        "answer_bert_score": 0.88,
+        "gpt4_accuracy": 2.16,
+        "gpt4_informativeness": 2.13,
+        "answer_relevance_score": 0.91,
+        "response_length": 676.02,
+        "dataset": "asqa"
+    },
+    {
+        "model": "gpt_3.5_turbo_instruct",
+        "answer_rouge_correctness": 0.30,
+        "answer_exact_match": 0.34,
+        "answer_disambig_f1": 0.31,
+        "answer_bert_score": 0.87,
+        "gpt4_accuracy": 2.61,
+        "gpt4_informativeness": 2.58,
+        "answer_relevance_score": 0.91,
+        "response_length": 804.68,
+        "dataset": "asqa"
+    },
+    {
+        "model": "mistral_7b",
+        "answer_rouge_correctness": 0.31,
+        "answer_exact_match": 0.21,
+        "answer_disambig_f1": 0.27,
+        "answer_bert_score": 0.87,
+        "gpt4_accuracy": 2.03,
+        "gpt4_informativeness": 1.90,
+        "answer_relevance_score": 0.90,
+        "response_length": 705.42,
+        "dataset": "asqa"
+    },
+    {
+        "model": "llama2_7b_chat",
+        "answer_rouge_correctness": 0.31,
+        "answer_exact_match": 0.22,
+        "answer_disambig_f1": 0.28,
+        "answer_bert_score": 0.88,
+        "gpt4_accuracy": 2.03,
+        "gpt4_informativeness": 2.07,
+        "answer_relevance_score": 0.91,
+        "response_length": 688.71,
+        "dataset": "asqa"
+    },
+    {
+        "model": "llama3_8b_instruct",
+        "answer_rouge_correctness": 0.31,
+        "answer_exact_match": 0.27,
+        "answer_disambig_f1": 0.29,
+        "answer_bert_score": 0.88,
+        "gpt4_accuracy": 2.56,
+        "gpt4_informativeness": 2.37,
+        "answer_relevance_score": 0.91,
+        "response_length": 739.70,
+        "dataset": "asqa"
+    },
+    {
+        "model": "solar_10.7b_instruct",
+        "answer_rouge_correctness": 0.25,
+        "answer_exact_match": 0.23,
+        "answer_disambig_f1": 0.28,
+        "answer_bert_score": 0.86,
+        "gpt4_accuracy": 2.39,
+        "gpt4_informativeness": 2.41,
+        "answer_relevance_score": 0.89,
+        "response_length": 830.96,
+        "dataset": "asqa"
+    }
+]

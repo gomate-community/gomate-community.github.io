@@ -1,0 +1,42 @@
+[
+    {
+        "model": "glm4-9b",
+        "answer_rouge_correctness": 0.49,
+        "answer_bert_score": 0.92,
+        "answer_distinct": 0.95,
+        "answer_length": 987.50,
+        "dataset": "wikieval"
+    },
+    {
+        "model": "gpt-3.5-turbo",
+        "answer_rouge_correctness": 0.58,
+        "answer_bert_score": 0.94,
+        "answer_distinct": 0.98,
+        "answer_length": 388.86,
+        "dataset": "wikieval"
+    },
+    {
+        "model": "llama3-8b",
+        "answer_rouge_correctness": 0.56,
+        "answer_bert_score": 0.93,
+        "answer_distinct": 0.96,
+        "answer_length": 499.50,
+        "dataset": "wikieval"
+    },
+    {
+        "model": "mistral-7b",
+        "answer_rouge_correctness": 0.49,
+        "answer_bert_score": 0.92,
+        "answer_distinct": 0.94,
+        "answer_length": 849.98,
+        "dataset": "wikieval"
+    },
+    {
+        "model": "solar-10.7b",
+        "answer_rouge_correctness": 0.54,
+        "answer_bert_score": 0.93,
+        "answer_distinct": 0.98,
+        "answer_length": 515.48,
+        "dataset": "wikieval"
+    }
+]

@@ -1,0 +1,79 @@
+[
+    {
+        "model":"glm-4",
+        "BERT Score":0.83,
+        "Rouge-L":0.11,
+        "Answer Relevance Score":0.81,
+        "GPT-4 Score":8.63,
+        "GPT4 Accuracy":4.60,
+        "GPT4 Informativeness":4.71,
+        "answer_length":1137.35,
+        "dataset":"antique"
+    },
+    {
+        "model":"llama2-13b-chat",
+        "BERT Score":0.85,
+        "Rouge-L":0.13,
+        "Answer Relevance Score":0.70,
+        "GPT-4 Score":4.66,
+        "GPT4 Accuracy":3.45,
+        "GPT4 Informativeness":2.91,
+        "answer_length":215.25,
+        "dataset":"antique"
+    },
+    {
+        "model":"gpt_3.5_turbo_instruct",
+        "BERT Score":0.82,
+        "Rouge-L":0.11,
+        "Answer Relevance Score":0.73,
+        "GPT-4 Score":8.28,
+        "GPT4 Accuracy":4.59,
+        "GPT4 Informativeness":4.46,
+        "answer_length":909.28,
+        "dataset":"antique"
+    },
+    {
+        "model":"mistral_7b",
+        "BERT Score":0.85,
+        "Rouge-L":0.13,
+        "Answer Relevance Score":0.63,
+        "GPT-4 Score":2.80,
+        "GPT4 Accuracy":2.72,
+        "GPT4 Informativeness":2.06,
+        "answer_length":189.71,
+        "dataset":"antique"
+    },
+    {
+        "model":"llama2_7b_chat",
+        "BERT Score":0.85,
+        "Rouge-L":0.14,
+        "Answer Relevance Score":0.67,
+        "GPT-4 Score":4.16,
+        "GPT4 Accuracy":3.20,
+        "GPT4 Informativeness":2.68,
+        "answer_length":190.61,
+        "dataset":"antique"
+    },
+    {
+        "model":"llama3_8b_instruct",
+        "BERT Score":0.84,
+        "Rouge-L":0.14,
+        "Answer Relevance Score":0.70,
+        "GPT-4 Score":5.60,
+        "GPT4 Accuracy":3.84,
+        "GPT4 Informativeness":3.60,
+        "answer_length":306.38,
+        "dataset":"antique"
+    },
+    {
+        "model":"solar_10.7b_instruct",
+        "BERT Score":0.84,
+        "Rouge-L":0.12,
+        "Answer Relevance Score":0.70,
+        "GPT-4 Score":7.12,
+        "GPT4 Accuracy":4.28,
+        "GPT4 Informativeness":4.14,
+        "answer_length":424.45,
+        "dataset":"antique"
+    }
+]
