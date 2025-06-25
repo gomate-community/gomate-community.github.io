@@ -23,6 +23,9 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        echo "--- Verifying _site directory contents ---"
+        ls -F ${{ github.workspace }}/_site/
+        echo "-----------------------------------------"
     
     - name: Upload artifact for GitHub Pages
       uses: actions/upload-pages-artifact@v3
