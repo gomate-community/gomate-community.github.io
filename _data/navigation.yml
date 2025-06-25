@@ -6,25 +6,25 @@ main:
   - title: "BenchRAG"
     url: https://github.com/gomate-community/BenchRAG
   - title: "Awesome-papers-for-RAG"
-    url: /papers/
+    url: /papers
   - title: "RAGEval"
-    url: /eval/
+    url: /eval
 
 
 docs:
   - title: Papers for RAG
     children:
       - title: "The overview of RAG"
-        url: /papers/
+        url: /papers
       - title: "Interpretor"
-        url: /papers/interpreter/
+        url: /papers/interpreter
       - title: "Retriever"
-        url: /papers/retriever/
+        url: /papers/retriever
       - title: "Compressor"
-        url: /papers/compressor/
+        url: /papers/compressor
       - title: "Generator"
-        url: /papers/generator/
+        url: /papers/generator
       - title: "Validator"
-        url: /papers/validator/
+        url: /papers/validator
       - title: "Evaluator"
-        url: /papers/evaluator/
+        url: /papers/evaluator
