@@ -1,0 +1,30 @@
+# main links
+
+main:
+  - title: "TrustRAG"
+    url: https://github.com/gomate-community/TrustRAG
+  - title: "BenchRAG"
+    url: https://github.com/gomate-community/BenchRAG
+  - title: "Awesome-papers-for-RAG"
+    url: /papers/
+  - title: "RAGEval"
+    url: /eval/
+
+
+docs:
+  - title: Papers for RAG
+    children:
+      - title: "The overview of RAG"
+        url: /papers/
+      - title: "Interpretor"
+        url: /papers/interpreter/
+      - title: "Retriever"
+        url: /papers/retriever/
+      - title: "Compressor"
+        url: /papers/compressor/
+      - title: "Generator"
+        url: /papers/generator/
+      - title: "Validator"
+        url: /papers/validator/
+      - title: "Evaluator"
+        url: /papers/evaluator/
