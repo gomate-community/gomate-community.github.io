@@ -86,7 +86,7 @@ excerpt: "Projects and papers from Gomate Community, focused on RAG research, IR
 .archive__item-stats { /* 星标和数字区域 */
   margin-top: 0em; /* 进一步减小顶部边距 */
   margin-bottom: 0; /* 移除底部边距 */
-  font-size: 0.8em; /* 进一步减小字体大小 */
+  font-size: 0.4em; /* 进一步减小字体大小 */
   color: #555;
   text-align: left;
 }
@@ -149,7 +149,7 @@ fetch('/assets/data/repos.json')
     repos.forEach(repo => {
       const el = document.getElementById(`stats-${repo.name}`);
       if (el) {
-        el.innerHTML = `⭐ ${repo.stargazers_count} &nbsp;&nbsp;| 🍴 ${repo.forks_count}`;
+        el.innerHTML = `⭐ Starred ${repo.stargazers_count} &nbsp;&nbsp;| 🍴 Fork ${repo.forks_count}`;
       }
     });
   });
