@@ -1,0 +1,18 @@
+<a href="{{ include.url }}" style="text-decoration: none; color: inherit;">
+  <div class="archive__item" style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: #fff; /* 移除 height: 100%; */">
+    
+    {% if include.image %}
+    <div class="archive__item-image-container"> 
+      <img src="{{ include.image }}" alt="{{ include.title }}" style="width: 100%; object-fit: cover;">
+    </div>
+    {% endif %}
+    
+    <div class="archive__item-content"> 
+      <h3 class="archive__item-title"> 
+        {% if include.icon %}<i class="{{ include.icon }}"></i> {% endif %}{{ include.title }}
+      </h3>
+      <p class="archive__item-excerpt">{{ include.excerpt }}</p> 
+      <p id="stats-{{ include.repo }}" class="archive__item-stats"></p> 
+    </div>
+  </div>
+</a>
