@@ -2,13 +2,13 @@
 
 main:
   - title: "TrustRAG"
-    url: https://github.com/gomate-community/TrustRAG
+    url: /trustrag
   - title: "BenchRAG"
-    url: https://github.com/gomate-community/BenchRAG
+    url: /benchrag
   - title: "Awesome-papers-for-RAG"
     url: /papers
   - title: "RAGEval"
-    url: /eval
+    url: /rageval
 
 
 docs:
