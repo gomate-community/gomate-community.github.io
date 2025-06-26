@@ -14,24 +14,24 @@ jobs:
 
       - name: Fetch GitHub repo stats
         run: |
-          echo "[" > _data/repos.json
+          echo "[" > assets/data/repos.json
           curl -s https://api.github.com/repos/gomate-community/TrustRAG >> _data/repos.json
-          echo "," >> _data/repos.json
+          echo "," >> assets/data/repos.json
           curl -s https://api.github.com/repos/gomate-community/rageval >> _data/repos.json
-          echo "," >> _data/repos.json
+          echo "," >> assets/data/repos.json
           curl -s https://api.github.com/repos/gomate-community/awesome-papers-for-rag >> _data/repos.json
-          echo "," >> _data/repos.json
+          echo "," >> assets/data/repos.json
           curl -s https://api.github.com/repos/gomate-community/BenchRAG >> _data/repos.json
-          echo "," >> _data/repos.json
+          echo "," >> assets/data/repos.json
           curl -s https://api.github.com/repos/gomate-community/Must-Read-IR-Papers >> _data/repos.json
-          echo "," >> _data/repos.json
+          echo "," >> assets/data/repos.json
           curl -s https://api.github.com/repos/gomate-community/gomate-community.github.io >> _data/repos.json
-          echo "]" >> _data/repos.json
+          echo "]" >> assets/data/repos.json
 
       - name: Commit and push
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add _data/repos.json
+          git add assets/data/repos.json
           git commit -m "Update GitHub repo stats" || echo "No changes to commit"
           git push
