@@ -1,0 +1,37 @@
+name: Update GitHub Repo Stats
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # 每天 06:00 UTC 自动更新
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site repo
+        uses: actions/checkout@v3
+
+      - name: Fetch GitHub repo stats
+        run: |
+          echo "[" > _data/repos.json
+          curl -s https://api.github.com/repos/gomate-community/TrustRAG >> _data/repos.json
+          echo "," >> _data/repos.json
+          curl -s https://api.github.com/repos/gomate-community/rageval >> _data/repos.json
+          echo "," >> _data/repos.json
+          curl -s https://api.github.com/repos/gomate-community/awesome-papers-for-rag >> _data/repos.json
+          echo "," >> _data/repos.json
+          curl -s https://api.github.com/repos/gomate-community/BenchRAG >> _data/repos.json
+          echo "," >> _data/repos.json
+          curl -s https://api.github.com/repos/gomate-community/Must-Read-IR-Papers >> _data/repos.json
+          echo "," >> _data/repos.json
+          curl -s https://api.github.com/repos/gomate-community/gomate-community.github.io >> _data/repos.json
+          echo "]" >> _data/repos.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add _data/repos.json
+          git commit -m "Update GitHub repo stats" || echo "No changes to commit"
+          git push
