@@ -25,27 +25,6 @@ sidebar:
 - 支持统一评估：使用一致的评估指标（如Recall@k、MRR@k等）。
 
 
-# Data Statistics
-
-| Dataset              | Q   | 𝒟         | 𝒟⁺  | Q Len | 𝒟 Len | Q Source            | 𝒟 Source                                       |
-|----------------------|-----|-----------|------|--------|--------|----------------------|------------------------------------------------|
-| **StackExchange**                                                                                                          |
-| Biology              | 103 | 57,364    | 3.6  | 83.6   | 115.2  | StackExchange post   | Web pages								      |
-| Earth Science        | 118 | 122,388   | 7.7  | 132.4  | 113.3  | StackExchange post   | Web pages                                      |
-| Economics            | 103 | 50,221    | 8.0  | 120.2  | 181.5  | StackExchange post   | Web pages                                      |
-| Psychology           | 101 | 52,841    | 7.3  | 118.2  | 149.6  | StackExchange post   | Web pages                                      |
-| Robotics             | 101 | 62,198    | 5.5  | 120.6  | 818.9  | StackExchange post   | Web pages                                      |
-| Stack Overflow       | 117 | 107,100   | 7.0  | 704.5  | 478.3  | StackExchange post   | Web pages                                      |
-| Sustainable Living   | 108 | 60,732    | 5.6  | 108.0  | 148.5  | StackExchange post   | Web pages                                      |
-| **Coding**                                                                                                                |
-| LeetCode             | 142 | 413,932   | 1.8  | 483.1  | 497.5  | Coding question      | Coding Q&Sol                                   |
-| Pony                 | 112 | 7,894     | 22.5 | 98.3   | 102.6  | Coding question      | Syntax Doc                                     |
-| **Theorems**                                                                                                              |
-| AoPS                 | 111 | 188,177   | 4.7  | 89.0   | 250.5  | Math Olympiad Q      | STEM Q&Sol                                     |
-| TheoremQA            | 206 | 188,177   | 3.2  | 117.1  | 250.5  | Theorem-based Q      | STEM Q&Sol                                     |
-
-
----
 
 # Retrieval Performance
 
@@ -82,3 +61,37 @@ sidebar:
 ---
 
 
+# Answer Performance
+
+## 1. [Origial paper](https://arxiv.org/pdf/2407.12883) performances, evaluate with Claude-3.5-sonnet.
+
+| Generator         | Retriever | Bio. | Earth. | Econ. | Psy. | Rob. | Stack. | Sus. | Average | Checked|
+|------------------|-----------|------|--------|-------|------|------|--------|------|---------|---------|
+| Claude-3.5-sonnet | None      | 79.4 | 82.3   | 75.6  | 74.5 | 76.7 | 81.8   | 73.5 | 77.7    |:white_check_mark:   |
+| Claude-3.5-sonnet | BM25      | 78.2 | 82.6   | 76.3  | 78.2 | 76.3 | 83.0   | 73.6 | 78.3    |:white_check_mark:   |
+| Claude-3.5-sonnet | SBERT     | 79.6 | 82.5   | 75.8  | 80.6 | 77.0 | 83.4   | **74.1** | 79.0    |:white_check_mark:   |
+| Claude-3.5-sonnet | Qwen      | **80.2** | **83.5**   | **77.0**  | **81.1** | **77.2** | **85.8**   | 72.6 | **79.6**    |:white_check_mark:   |
+| Claude-3.5-sonnet | Oracle    | 82.4 | 84.5   | 78.3  | 82.4 | 78.5 | 87.9   | 78.6 | 81.8    |:white_check_mark:   |
+
+
+# Data Statistics
+
+| Dataset              | Q   | 𝒟         | 𝒟⁺  | Q Len | 𝒟 Len | Q Source            | 𝒟 Source                                       |
+|----------------------|-----|-----------|------|--------|--------|----------------------|------------------------------------------------|
+| **StackExchange**                                                                                                          |
+| Biology              | 103 | 57,364    | 3.6  | 83.6   | 115.2  | StackExchange post   | Web pages								      |
+| Earth Science        | 118 | 122,388   | 7.7  | 132.4  | 113.3  | StackExchange post   | Web pages                                      |
+| Economics            | 103 | 50,221    | 8.0  | 120.2  | 181.5  | StackExchange post   | Web pages                                      |
+| Psychology           | 101 | 52,841    | 7.3  | 118.2  | 149.6  | StackExchange post   | Web pages                                      |
+| Robotics             | 101 | 62,198    | 5.5  | 120.6  | 818.9  | StackExchange post   | Web pages                                      |
+| Stack Overflow       | 117 | 107,100   | 7.0  | 704.5  | 478.3  | StackExchange post   | Web pages                                      |
+| Sustainable Living   | 108 | 60,732    | 5.6  | 108.0  | 148.5  | StackExchange post   | Web pages                                      |
+| **Coding**                                                                                                                |
+| LeetCode             | 142 | 413,932   | 1.8  | 483.1  | 497.5  | Coding question      | Coding Q&Sol                                   |
+| Pony                 | 112 | 7,894     | 22.5 | 98.3   | 102.6  | Coding question      | Syntax Doc                                     |
+| **Theorems**                                                                                                              |
+| AoPS                 | 111 | 188,177   | 4.7  | 89.0   | 250.5  | Math Olympiad Q      | STEM Q&Sol                                     |
+| TheoremQA            | 206 | 188,177   | 3.2  | 117.1  | 250.5  | Theorem-based Q      | STEM Q&Sol                                     |
+
+
+---
