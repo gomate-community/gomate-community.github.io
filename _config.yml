@@ -317,14 +317,16 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "awesome-papers-for-rag"
+      path: ""
       type: posts
     values:
-      baseurl: "/awesome-papers-for-rag/"
       layout: single
       author_profile: false #true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
-      show_date: true
+      toc: true
+      toc_label: "Table of Content"
+      toc_icon: "fa-solid fa-list-ul"
+      toc_sticky: true

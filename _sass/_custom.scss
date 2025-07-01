@@ -1,0 +1,66 @@
+// _sass/_custom.scss
+
+// Define new widths for the sidebar
+// Minimal Mistakes' default for $right-sidebar-width-narrow is often around 300px,
+// and $right-sidebar-width around 320px.
+// Adjust these values to make your sidebar narrower.
+
+$right-sidebar-width-narrow: 180px; // Example: reduce to 220px for large screens
+$right-sidebar-width: 220px;       // Example: reduce to 240px for x-large screens
+
+// You might also want to explicitly target the .sidebar if the above doesn't fully work
+// Or if you want a fixed pixel width regardless of the variables.
+// However, overriding the variables is the cleaner way if they control the sidebar width.
+.sidebar {
+  // background-color: red !important; // 临时改变背景色，看是否生效
+  @include breakpoint($large) {
+    width: 160px; /* Force a width for large screens */
+    max-width: 160px;
+  }
+
+  @include breakpoint($x-large) {
+    width: 200px; /* Force a width for extra-large screens */
+    max-width: 200px;
+  }
+}
+
+
+// 3. 调整主内容区域 (.archive) 的宽度和填充
+//    我们重新计算宽度，并减少 padding-inline-end
+.archive {
+  @include breakpoint($large) {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    // padding-inline-end: 200px; // 调整为一个小的右侧填充，你可以根据视觉效果调整这个值
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    // padding-inline-end: 200px; // 调整为一个小的右侧填充
+  }
+}
+
+// 4. 调整面包屑导航 (.breadcrumbs ol) 的宽度
+//    这部分也使用了侧边栏宽度进行计算，确保它也跟着变宽
+.breadcrumbs ol {
+  @include breakpoint($large) {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+  }
+}
+
+// 5. 新增：调整 .page 类的宽度和填充 (根据你的最新发现)
+.page {
+  // 假设 .page 在 $large 断点也有类似宽度定义，如果没有则可以只保留 $x-large 部分
+  @include breakpoint($large) {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    // padding-inline-end: 300px; // 同样调整为一个小的右侧填充
+  }
+
+  @include breakpoint($x-large) { // 对应你观察到的 min-width: 80em
+    width: calc(100% - #{$right-sidebar-width});
+    // padding-inline-end: 300px; // 同样调整为一个小的右侧填充 (原为 300px)
+  }
+}

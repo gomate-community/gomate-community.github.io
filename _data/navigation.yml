@@ -9,7 +9,8 @@ main:
     url: /papers
   - title: "RAGEval"
     url: /rageval
-
+  - title: "Deep Research Posts"
+    url: /deepresearch
 
 docs:
   - title: Papers for RAG
