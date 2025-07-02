@@ -1,3 +1,7 @@
+---
+mermaid: true
+---
+
 # Benchmarking the Benchmarks: A Systematic Survey of Datasets for Hallucination Detection in Large Language Models
 
 **关键词：** Large Language Models, Hallucination Detection, Dataset Survey, Benchmark Evaluation, Natural Language Processing
